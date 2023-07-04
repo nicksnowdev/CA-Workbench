@@ -284,6 +284,7 @@ const setPatchJSONSetter = (objRef, funcRef) => {
   patchJSON = objRef;
   setPatchJSON = funcRef;
 };
+
 const check_ca = () => {
   let r = convertBase(
     ruleBuffer.toString().replace(/\,/g, '').replace(/255/g, '1'),
@@ -293,7 +294,7 @@ const check_ca = () => {
     false
   );
 
-  window.history.replaceState('', '', '?rule=' + r);
+  window.history.replaceState(null, null, '?rule=' + r);
 
   const req = new XMLHttpRequest();
   req.onload = () => {
