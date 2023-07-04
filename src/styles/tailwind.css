@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.galleryResultsBox {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hide {
+  @apply -translate-y-[9999999px];
+}
+
+body {
+  @apply h-screen bg-bg1 transition-colors duration-200 ease-in-out dark:bg-bg1Dark;
+}
